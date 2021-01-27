@@ -2,7 +2,7 @@ module.exports = {
 	name: 'emote',
 	description: 'have Bart emote for you',
 	execute(message, args) {
-
+		const {nums} = require('../config.json');
 		const messages = [
 		"ᕦ(ò_óˇ)ᕤ",
 		"୧( ಠ Д ಠ )୨",
@@ -34,7 +34,7 @@ module.exports = {
 
 
         // Now the randomMessage will be recalculated every time the command is run
-        var randomMessage = messages[Math.floor(Math.random() * messages.length)];
+        var randomMessage = messages[Math.floor(Math.random() * messages.length * nums[Math.floor(Math.random())])];
         message.channel.send(randomMessage);
 	},
 };

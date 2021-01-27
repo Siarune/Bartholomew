@@ -25,6 +25,7 @@ client.on('message', message => {
 
 	try {
 		client.commands.get(command).execute(message, args);
+		console.log(command);
 	} catch (error) {
 		console.error(error);
 		message.reply('Uh oh something did a fuckey wuckey.');

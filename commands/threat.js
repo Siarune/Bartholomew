@@ -2,7 +2,7 @@ module.exports = {
 	name: 'threat',
 	description: 'Have Bart threaten you or your friends',
 	execute(message, args) {
-
+const {nums} = require('../config.json');
 		const messages = [
 		"You're going to have to learn how to function without bones real soon.",
 		"I am going to boil your teeth.",
@@ -40,7 +40,7 @@ module.exports = {
 
 
         // Now the randomMessage will be recalculated every time the command is run
-        const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+        const randomMessage = messages[Math.floor(Math.random() * messages.length * nums[Math.floor(Math.random())])];
         message.channel.send(randomMessage);
 	},
 };

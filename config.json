@@ -1,5 +1,6 @@
 {
 	"prefix": "bart",
-	"token": "NzkyNTk1MTk1ODk1MjE4MjE2.X-f_zA.VnjzGKwjGGcQU1ecInJQvy5bDXs",
-	"readyMessage": "Ready to wreak havoc"
+	"token": "",
+	"readyMessage": "Ready to wreak havoc",
+	"nums": [1,2,3,4,5]
 }
