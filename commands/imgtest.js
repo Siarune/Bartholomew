@@ -3,7 +3,6 @@ module.exports = {
   description: 'Test embedding images',
   execute(message, args) {
     const Discord = require('discord.js');
-    const {nums} = require('../config.json');
     const links =  [
         "https://i.imgur.com/gUFdCtK.jpg",
         "https://i.imgur.com/k213LHG.png",
@@ -12,7 +11,7 @@ module.exports = {
         ];
 
 
-        var link = links[Math.floor(Math.random() * links.length * nums[Math.floor(Math.random())])];
+        var link = links[Math.floor(Math.random() * links.length * process.env.modifier)];
 
       const embed = new Discord.MessageEmbed()
 
