@@ -2,6 +2,7 @@ require('dotenv').config();
 const fs = require('fs');
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const welcome = require('./welcome.js')
 
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
@@ -13,6 +14,7 @@ for (const file of commandFiles) {
 
 client.once('ready', () => {
   console.log(process.env.READYMESSAGE);
+  welcome(client);
 });
 
 client.on('message', message => {
@@ -25,23 +27,11 @@ client.on('message', message => {
 
   try {
     client.commands.get(command).execute(message, args);
-    console.log(command);
+    console.log(command, args);
   } catch (error) {
     console.error(error);
     message.reply(process.env.ERRORMESSAGE);
   }
-});
-
-client.on('guildMemberAdd', (member) => {
-  const guild = member.guild;
-  console.log('new person');
-  guild.channels.cache.find(channel => channel.name === "general").send(process.env.WELCOMEMESSAGE);
-});
-
-client.on('guildMemberRemove', (member) => {
-  const guild = member.guild;
-  console.log('person left');
-  guild.channels.cache.find(channel => channel.name === "general").send(process.env.GOODBYEMESSAGE);
 });
 
 client.login();
