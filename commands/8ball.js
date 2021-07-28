@@ -1,5 +1,5 @@
 module.exports = {
-    name: '8ball',
+	name: '8ball',
 	description: 'Ask the omniscient bart',
 	execute(message, args) {
 
@@ -12,13 +12,14 @@ module.exports = {
 			"Definitely",
 			"How should I know",
 			"Don't worry about it",
-			"I guess"
+			"I guess",
+			"Reply hazy. Try again"
 		];
 
 		const embed = new Discord.MessageEmbed()
-		.setTitle("My sources say...")
-		.setDescription(fortunes[Math.floor(Math.random() * messages.length)]);
+			.setTitle("My sources say...")
+			.setDescription(fortunes[Math.floor(Math.random() * fortunes.length)]);
 
-message.channel.send(embed);
-}
+		message.channel.send(embed);
+	},
 }

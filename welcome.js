@@ -18,5 +18,6 @@ module.exports = (client) => {
         const channel = member.guild.channels.cache.get(welcomeChannel);
 
         channel.send(message);
+        
     });
 };

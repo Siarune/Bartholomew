@@ -3,3 +3,4 @@ Worklist
 fix reddit scraping
 maybe incorporate welcomes/goodbyes
 
+start using client.emit()
