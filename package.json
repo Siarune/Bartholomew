@@ -1,6 +1,6 @@
 {
   "name": "bartholomew",
-  "version": "snoo-snoo",
+  "version": "fou",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,10 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.21.1",
-    "cheerio": "^1.0.0-rc.10",
     "discord.js": "^12.5.3",
-    "dotenv": "^10.0.0"
+    "dotenv": "^10.0.0",
+    "node-fetch": "^3.0.0",
+    "ws": "^8.2.1"
   },
   "engines": {
     "node": "16.4.2",

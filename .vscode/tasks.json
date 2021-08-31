@@ -5,8 +5,8 @@
 			"type": "npm",
 			"script": "start",
 			"problemMatcher": [],
-			"label": "npm: start",
-			"detail": "node index.js"
+			"label": "Bartstart",
+			"detail": "node ."
 		}
 	]
 }
